@@ -4,6 +4,12 @@
 
 int main() {
   Item item;
+
   init_item(&item, "name", 0, 0);
-  printf("hello %s %d %d!\n", item.name, item.sellIn, item.quality);
+
+  printf("%s %d %d -> ", item.name, item.sellIn, item.quality);
+
+  update_quality(&item, 1);
+
+  printf("%d %d\n", item.sellIn, item.quality);
 }
