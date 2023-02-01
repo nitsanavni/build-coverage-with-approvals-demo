@@ -12,7 +12,7 @@ cc \
 rm gilded-rose-test
 
 # coverage
-gcov gilded-rose.c
+gcov -b gilded-rose.c
 
 # clean coverage
 rm gilded-rose.gc*
