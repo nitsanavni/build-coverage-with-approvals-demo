@@ -1,0 +1,6 @@
+mutators:
+    - cxx_all
+    - cxx_all
+    - cxx_add_to_sub
+    - cxx_logical
+quiet: false
