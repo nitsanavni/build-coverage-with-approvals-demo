@@ -44,3 +44,5 @@
         -   conditions
         -   some untested code
     -   run automatic mutation coverage
+-   pairwise
+    -   ./jenny -n2 2 2 2 <-> ./jenny -n1 2 2 2 <-> ./jenny -n3 2 2 2
