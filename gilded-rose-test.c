@@ -8,9 +8,11 @@
 int main() {
   Item item;
 
-  const char *names[] = {"name"};
-  int sellIns[] = {0};
-  int qualities[] = {0, 1};
+  const char *names[] = {"name", "Aged Brie",
+                         "Backstage passes to a TAFKAL80ETC concert",
+                         "Sulfuras, Hand of Ragnaros"};
+  int sellIns[] = {0, -1};
+  int qualities[] = {0, 1, 2};
 
   for (const char **name = names; name < E(names); name++) {
     for (int *sellIn = sellIns; sellIn < E(sellIns); sellIn++) {
