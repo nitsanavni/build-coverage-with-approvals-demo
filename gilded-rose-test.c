@@ -11,8 +11,8 @@ int main() {
   const char *names[] = {"name", "Aged Brie",
                          "Backstage passes to a TAFKAL80ETC concert",
                          "Sulfuras, Hand of Ragnaros"};
-  int sellIns[] = {0, -1, 12};
-  int qualities[] = {0, 1, 2, 51, 49};
+  int sellIns[] = {0, -1, 12, 1, 6, 11};
+  int qualities[] = {0, 1, 2, 51, 49, 50};
 
   for (const char **name = names; name < E(names); name++) {
     for (int *sellIn = sellIns; sellIn < E(sellIns); sellIn++) {
