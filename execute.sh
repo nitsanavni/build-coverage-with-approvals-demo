@@ -16,4 +16,4 @@ cc \
 rm gilded-rose-test
 
 # coverage
-gcov -b gilded-rose.c
+gcov -bc gilded-rose.c

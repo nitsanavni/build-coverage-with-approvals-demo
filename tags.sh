@@ -1,0 +1,1 @@
+git log --oneline --reverse 1-hello-world~..8-cover-branches
