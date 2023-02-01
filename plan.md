@@ -36,11 +36,11 @@
         -   pause approvals
     -   add branches coverage
     -   build up the coverage again
+    -   manual mutations break the test
+        -   we saw this style in our ensemble work
 -   mutations
     -   show simplified version
         -   function calls
         -   conditions
         -   some untested code
-    -   manual mutations break the test
-        -   we saw this style in our ensemble work
     -   run automatic mutation coverage
