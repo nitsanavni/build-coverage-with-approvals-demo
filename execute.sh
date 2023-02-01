@@ -2,7 +2,7 @@
 
 # jenny
 
-./jenny -n2 -s1 4 6 6 | grep -v Could | (echo const int jenny[][3] = {; sed -f indices-jenny.sed;echo }\;;) > jenny.h
+./jenny -n2 -s5 4 6 6 | grep -v Could | (echo const int jenny[][3] = {; sed -f indices-jenny.sed;echo }\;;) > jenny.h
 
 # build
 cc \
