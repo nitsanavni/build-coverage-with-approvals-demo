@@ -2,22 +2,27 @@
 
 #include "./src/gilded-rose.h"
 
+#define S(array) (sizeof(array) / sizeof((array)[0]))
+#define E(array) (array + S(array))
+
 int main() {
   Item item;
 
-  init_item(&item, "name", 0, 0);
+  const char *names[] = {"name"};
+  int sellIns[] = {0};
+  int qualities[] = {0, 1};
 
-  printf("%s %d %d -> ", item.name, item.sellIn, item.quality);
+  for (const char **name = names; name < E(names); name++) {
+    for (int *sellIn = sellIns; sellIn < E(sellIns); sellIn++) {
+      for (int *quality = qualities; quality < E(qualities); quality++) {
+        init_item(&item, *name, *sellIn, *quality);
 
-  update_quality(&item, 1);
+        printf("%s %d %d -> ", item.name, item.sellIn, item.quality);
 
-  printf("%d %d\n", item.sellIn, item.quality);
+        update_quality(&item, 1);
 
-  init_item(&item, "name", 0, 1);
-
-  printf("%s %d %d -> ", item.name, item.sellIn, item.quality);
-
-  update_quality(&item, 1);
-
-  printf("%d %d\n", item.sellIn, item.quality);
+        printf("%d %d\n", item.sellIn, item.quality);
+      }
+    }
+  }
 }
