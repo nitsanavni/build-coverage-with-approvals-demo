@@ -61,52 +61,31 @@ void feature_RegDiff_lt_AnsprZuO() { AnsprZuO = 1; };
 
 void null_feature(){};
 
+void run_feature(void (*feature_func)()) {
+  reset_globals();
+  reset_internals();
+  feature_func();
+
+  print_privates();
+  print_em_globals();
+  theFunctionToTest();
+  print_privates();
+  print_em_globals();
+}
+
 int main() {
-  reset_globals();
-  reset_internals();
-  null_feature();
+  // array of function pointers
+  void (*features[])() = {
+      null_feature,
+      feature_AutoIbsOk_C_IBS_OK_and_stuff,
+      feature_NImpuls_TOTZONE,
+      feature_Zustang_0_STATE_WITHIN_DEADZONE,
+      feature_RegDiff_lt_AnsprZuO,
+  };
 
-  print_privates();
-  print_em_globals();
-  theFunctionToTest();
-  print_privates();
-  print_em_globals();
+  for (size_t i = 0; i < S(features); ++i) {
+    run_feature(features[i]);
+  }
 
-  reset_globals();
-  reset_internals();
-  feature_AutoIbsOk_C_IBS_OK_and_stuff();
-
-  theFunctionToTest();
-  print_privates();
-  print_em_globals();
-
-  reset_globals();
-  reset_internals();
-  feature_NImpuls_TOTZONE();
-
-  print_privates();
-  print_em_globals();
-  theFunctionToTest();
-  print_privates();
-  print_em_globals();
-
-  reset_globals();
-  reset_internals();
-  feature_Zustang_0_STATE_WITHIN_DEADZONE();
-
-  print_privates();
-  print_em_globals();
-  theFunctionToTest();
-  print_privates();
-  print_em_globals();
-
-  reset_globals();
-  reset_internals();
-  feature_RegDiff_lt_AnsprZuO();
-
-  print_privates();
-  print_em_globals();
-  theFunctionToTest();
-  print_privates();
-  print_em_globals();
+  return 0;
 }
