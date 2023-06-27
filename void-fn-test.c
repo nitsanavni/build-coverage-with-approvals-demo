@@ -67,8 +67,11 @@ void feature_RegDiff_lt_AnsprZuO() { AnsprZuO = 1; };
 
 void null_feature(){};
 
-void feature_STROM_GRENZ() {
-  Nerker1 = STROM_GRENZ;
+void feature_STROM_GRENZ() { Nerker1 = STROM_GRENZ; }
+
+void feature_minus_37() {
+  feature_STROM_GRENZ();
+  WirkFall = 1;
 }
 
 void run_feature(void (*feature_func)()) {
@@ -92,6 +95,7 @@ int main() {
       feature_Zustang_0_STATE_WITHIN_DEADZONE,
       feature_Zwsp_Band,
       feature_STROM_GRENZ,
+      feature_minus_37,
   };
 
   for (size_t i = 0; i < S(features); ++i) {
