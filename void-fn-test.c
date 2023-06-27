@@ -43,6 +43,8 @@ void print_em_globals() {
          SollwertRev, StellFwd, StellIstRev, WirkFall);
 }
 
+void feature_AutoIbsOk_C_IBS_OK() { AutoIbsOk = C_IBS_OK; }
+
 int main() {
   print_privates();
   print_em_globals();
@@ -52,8 +54,7 @@ int main() {
   print_em_globals();
 
   reset_globals();
-  AutoIbsOk = C_IBS_OK;
-  // should we also set private state?
+  feature_AutoIbsOk_C_IBS_OK();
 
   theFunctionToTest();
   print_privates();
