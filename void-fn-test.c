@@ -57,6 +57,12 @@ void feature_Zustang_0_STATE_WITHIN_DEADZONE() {
   set_internals(0, 0, STATE_WITHIN_DEADZONE, 0);
 }
 
+void feature_Zwsp_Band() {
+  feature_Zustang_0_STATE_WITHIN_DEADZONE();
+  AnsprZuO = 1;
+  SollwertRev = 2;
+}
+
 void feature_RegDiff_lt_AnsprZuO() { AnsprZuO = 1; };
 
 void null_feature(){};
@@ -80,7 +86,7 @@ int main() {
       feature_AutoIbsOk_C_IBS_OK_and_stuff,
       feature_NImpuls_TOTZONE,
       feature_Zustang_0_STATE_WITHIN_DEADZONE,
-      feature_RegDiff_lt_AnsprZuO,
+      feature_Zwsp_Band,
   };
 
   for (size_t i = 0; i < S(features); ++i) {
