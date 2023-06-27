@@ -16,4 +16,7 @@ void print_em_globals() {
 int main() {
   print_em_globals();
   // do we want to print the private variables too?
+
+  // call the function
+  print_em_globals();
 }
