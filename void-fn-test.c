@@ -43,6 +43,8 @@ void print_em_globals() {
          SollwertRev, StellFwd, StellIstRev, WirkFall);
 }
 
+void feature_NImpuls_TOTZONE() { NImpuls = TOTZONE; }
+
 void feature_AutoIbsOk_C_IBS_OK_and_stuff() {
   AutoIbsOk = C_IBS_OK;
   RegMode = N_AUTOMATIK;
@@ -72,6 +74,16 @@ int main() {
 
   feature_AutoIbsOk_C_IBS_OK_and_stuff();
 
+  theFunctionToTest();
+  print_privates();
+  print_em_globals();
+
+  reset_globals();
+  reset_internals();
+  feature_NImpuls_TOTZONE();
+
+  print_privates();
+  print_em_globals();
   theFunctionToTest();
   print_privates();
   print_em_globals();
