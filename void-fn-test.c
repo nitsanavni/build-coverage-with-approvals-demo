@@ -74,6 +74,8 @@ void feature_minus_37() {
   WirkFall = 1;
 }
 
+void feature_limit_AnsprAufV() { AnsprAufV = 1; }
+
 void run_feature(void (*feature_func)()) {
   reset_globals();
   reset_internals();
@@ -96,6 +98,7 @@ int main() {
       feature_Zwsp_Band,
       feature_STROM_GRENZ,
       feature_minus_37,
+      feature_limit_AnsprAufV,
   };
 
   for (size_t i = 0; i < S(features); ++i) {
