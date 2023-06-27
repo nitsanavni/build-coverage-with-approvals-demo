@@ -76,6 +76,7 @@ void feature_minus_37() {
 
 void feature_limit_AnsprAufV() { AnsprAufV = 1; }
 void feature_TY_GRENZ_1() { NImpuls = TY_GRENZ_1; }
+void feature_TY_GRENZ_2() { NImpuls = TY_GRENZ_2; }
 
 static void (*features[])() = {
     null_feature,
@@ -87,6 +88,7 @@ static void (*features[])() = {
     feature_minus_37,
     feature_limit_AnsprAufV,
     feature_TY_GRENZ_1,
+    feature_TY_GRENZ_2,
 };
 
 void run_feature(void (*feature_func)()) {
