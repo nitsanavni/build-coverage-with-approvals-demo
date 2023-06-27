@@ -98,6 +98,7 @@ void feature_AUF_O_seems_to_be_unreachable() {
   AnsprAufV = 41;
 }
 void feature_StellIstRev() { StellIstRev = 1; }
+void feature_StellIstRev_2() { StellIstRev = -1; }
 
 static void (*features[])() = {
     null_feature,
@@ -116,6 +117,7 @@ static void (*features[])() = {
     feature_AUF_V_2,
     feature_AUF_O_seems_to_be_unreachable,
     feature_StellIstRev,
+    feature_StellIstRev_2,
 };
 
 void run_feature(void (*feature_func)()) {
