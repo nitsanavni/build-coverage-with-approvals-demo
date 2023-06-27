@@ -2,22 +2,21 @@
 
 # jenny
 
-./jenny -n2 -s5 4 6 6 | grep -v Could | (echo const int jenny[][3] = {; sed -f indices-jenny.sed;echo }\;;) > jenny.h
+# ./jenny -n2 -s5 4 6 6 | grep -v Could | (echo const int jenny[][3] = {; sed -f indices-jenny.sed;echo }\;;) > jenny.h
 
 # build
 cc \
     -ftest-coverage -fprofile-arcs \
-    gilded-rose-test.c src/gilded-rose.c -o gilded-rose-test > /dev/null
+    void-fn-test.c src/globals.cpp -o void-fn-test > /dev/null
 
 # run & test
-./gilded-rose-test | ./verify.sh -t gilded-rose
+./void-fn-test | ./verify.sh -t void-fn
 
 # clean
-rm gilded-rose-test
+rm void-fn-test
 
 # coverage
-gcov -b gilded-rose.c
+# gcov -b globals.c
 
 # clean coverage
-rm gilded-rose.gc*
-rm gilded-rose-test.gc*
+rm void-fn-test*.gc*

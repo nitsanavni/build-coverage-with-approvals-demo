@@ -6,9 +6,11 @@
 #define S(array) (sizeof(array) / sizeof((array)[0]))
 #define E(array) (array + S(array))
 
-int main() {
-  printf("%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d",
-         AnsprAufO, AnsprAufV, AnsprBand, AnsprHyst, AnsprZuO, AnsprZuV,
-         AutoIbsOk, BinSteuer, Nerker1, NImpuls, NRegFkt, RegDiff, RegDiffSch,
-         RegMode, SollwertRev, StellFwd, StellIstRev, WirkFall);
+void print_em_globals() {
+  printf("%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d\n", AnsprAufO,
+         AnsprAufV, AnsprBand, AnsprHyst, AnsprZuO, AnsprZuV, AutoIbsOk,
+         BinSteuer, Nerker1, NImpuls, NRegFkt, RegDiff, RegDiffSch, RegMode,
+         SollwertRev, StellFwd, StellIstRev, WirkFall);
 }
+
+int main() { print_em_globals(); }
