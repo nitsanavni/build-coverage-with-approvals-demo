@@ -1,9 +1,9 @@
 #ifndef SAMPLE_H
 #define SAMPLE_H
 
-#include "globals.h"
-#include "constants.h"
+#include "./constants.h"
+#include "./globals.h"
 
-void theFunctionToTest();
+extern void theFunctionToTest();
 
-#endif //SAMPLE_H
+#endif // SAMPLE_H
