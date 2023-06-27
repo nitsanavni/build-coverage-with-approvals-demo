@@ -88,6 +88,15 @@ void feature_AUF_V_2() {
   RegDiff = 1;
   RegDiffSch = 1;
 }
+void feature_AUF_O_seems_to_be_unreachable() {
+  feature_AUF_V_2();
+  feature_STROM_GRENZ();
+  feature_Zwsp_Band();
+  AnsprBand = 2;
+  RegDiff = 40;
+  RegDiffSch = 40;
+  AnsprAufV = 41;
+}
 
 static void (*features[])() = {
     null_feature,
@@ -104,6 +113,7 @@ static void (*features[])() = {
     feature_ZU_V,
     feature_AUF_V,
     feature_AUF_V_2,
+    feature_AUF_O_seems_to_be_unreachable,
 };
 
 void run_feature(void (*feature_func)()) {
