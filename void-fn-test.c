@@ -43,7 +43,11 @@ void print_em_globals() {
          SollwertRev, StellFwd, StellIstRev, WirkFall);
 }
 
-void feature_AutoIbsOk_C_IBS_OK() { AutoIbsOk = C_IBS_OK; }
+void feature_AutoIbsOk_C_IBS_OK() {
+  AutoIbsOk = C_IBS_OK;
+  RegMode = N_AUTOMATIK;
+  BinSteuer = BO_REGLER;
+}
 
 int main() {
   print_privates();
