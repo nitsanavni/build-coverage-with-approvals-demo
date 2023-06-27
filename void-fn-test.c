@@ -44,25 +44,11 @@ void print_em_globals() {
 }
 
 int main() {
-  // before
+  theFunctionToTest();
   print_em_globals();
-  // do we want to print the private variables too?
+
+  set_globals(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
   theFunctionToTest();
-
-  // after
-  print_em_globals();
-
-  theFunctionToTest();
-
-  print_em_globals();
-
-  printf("resetting\n");
-  reset_globals();
-
-  print_em_globals();
-
-  theFunctionToTest();
-
   print_em_globals();
 }
