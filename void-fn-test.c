@@ -81,6 +81,8 @@ void feature_limit_PraeAufWirk() {
   AnsprAufV = 1;
   AnsprAufO = 1;
 }
+void feature_AUF_V() { RegDiff = 1; }
+void feature_ZU_V() { RegDiff = -1; }
 
 static void (*features[])() = {
     null_feature,
@@ -94,6 +96,8 @@ static void (*features[])() = {
     feature_TY_GRENZ_1,
     feature_TY_GRENZ_2,
     feature_limit_PraeAufWirk,
+    feature_ZU_V,
+    feature_AUF_V,
 };
 
 void run_feature(void (*feature_func)()) {
