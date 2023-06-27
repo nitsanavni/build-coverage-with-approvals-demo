@@ -51,7 +51,8 @@ int main() {
   print_privates();
   print_em_globals();
 
-  set_globals(0, 0, 0, 0, 0, 0, C_IBS_OK, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+  reset_globals();
+  AutoIbsOk = C_IBS_OK;
   // should we also set private state?
 
   theFunctionToTest();
