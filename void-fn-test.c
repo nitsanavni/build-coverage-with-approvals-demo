@@ -58,6 +58,13 @@ int main() {
   print_em_globals();
 
   reset_globals();
+
+  theFunctionToTest();
+  print_privates();
+  print_em_globals();
+
+  reset_globals();
+
   feature_AutoIbsOk_C_IBS_OK_and_stuff();
 
   theFunctionToTest();
