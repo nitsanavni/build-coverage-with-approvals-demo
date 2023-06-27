@@ -57,25 +57,23 @@ void feature_Zustang_0_STATE_WITHIN_DEADZONE() {
   set_internals(0, 0, STATE_WITHIN_DEADZONE, 0);
 }
 
+void feature_RegDiff_lt_AnsprZuO() { AnsprZuO = 1; };
+
+void null_feature(){};
+
 int main() {
-  print_privates();
-  print_em_globals();
-
-  theFunctionToTest();
-
-  print_privates();
-  print_em_globals();
-
   reset_globals();
   reset_internals();
+  null_feature();
 
+  print_privates();
+  print_em_globals();
   theFunctionToTest();
   print_privates();
   print_em_globals();
 
   reset_globals();
   reset_internals();
-
   feature_AutoIbsOk_C_IBS_OK_and_stuff();
 
   theFunctionToTest();
@@ -104,7 +102,7 @@ int main() {
 
   reset_globals();
   reset_internals();
-  AnsprZuO = 1;
+  feature_RegDiff_lt_AnsprZuO();
 
   print_privates();
   print_em_globals();
