@@ -67,6 +67,10 @@ void feature_RegDiff_lt_AnsprZuO() { AnsprZuO = 1; };
 
 void null_feature(){};
 
+void feature_STROM_GRENZ() {
+  Nerker1 = STROM_GRENZ;
+}
+
 void run_feature(void (*feature_func)()) {
   reset_globals();
   reset_internals();
@@ -87,6 +91,7 @@ int main() {
       feature_NImpuls_TOTZONE,
       feature_Zustang_0_STATE_WITHIN_DEADZONE,
       feature_Zwsp_Band,
+      feature_STROM_GRENZ,
   };
 
   for (size_t i = 0; i < S(features); ++i) {
