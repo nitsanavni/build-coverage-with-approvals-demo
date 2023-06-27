@@ -75,6 +75,19 @@ void feature_minus_37() {
 }
 
 void feature_limit_AnsprAufV() { AnsprAufV = 1; }
+void feature_TY_GRENZ_1() { NImpuls = TY_GRENZ_1; }
+
+static void (*features[])() = {
+    null_feature,
+    feature_AutoIbsOk_C_IBS_OK_and_stuff,
+    feature_NImpuls_TOTZONE,
+    feature_Zustang_0_STATE_WITHIN_DEADZONE,
+    feature_Zwsp_Band,
+    feature_STROM_GRENZ,
+    feature_minus_37,
+    feature_limit_AnsprAufV,
+    feature_TY_GRENZ_1,
+};
 
 void run_feature(void (*feature_func)()) {
   reset_globals();
@@ -89,21 +102,7 @@ void run_feature(void (*feature_func)()) {
 }
 
 int main() {
-  // array of function pointers
-  void (*features[])() = {
-      null_feature,
-      feature_AutoIbsOk_C_IBS_OK_and_stuff,
-      feature_NImpuls_TOTZONE,
-      feature_Zustang_0_STATE_WITHIN_DEADZONE,
-      feature_Zwsp_Band,
-      feature_STROM_GRENZ,
-      feature_minus_37,
-      feature_limit_AnsprAufV,
-  };
-
   for (size_t i = 0; i < S(features); ++i) {
     run_feature(features[i]);
   }
-
-  return 0;
 }

@@ -1,11 +1,11 @@
 
- *** test failed ***
+ *** test passed ***
 
 File 'src/sample.c'
-Lines executed:80.49% of 82
-Branches executed:83.33% of 72
-Taken at least once:59.72% of 72
+Lines executed:82.93% of 82
+Branches executed:86.11% of 72
+Taken at least once:63.89% of 72
 Calls executed:100.00% of 1
 Creating 'sample.c.gcov'
 
-Lines executed:80.49% of 82
+Lines executed:82.93% of 82
