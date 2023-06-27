@@ -53,6 +53,10 @@ void feature_AutoIbsOk_C_IBS_OK_and_stuff() {
 
 void reset_internals() { set_internals(0, 0, 0, 0); }
 
+void feature_Zustang_0_STATE_WITHIN_DEADZONE() {
+  set_internals(0, 0, STATE_WITHIN_DEADZONE, 0);
+}
+
 int main() {
   print_privates();
   print_em_globals();
@@ -81,6 +85,16 @@ int main() {
   reset_globals();
   reset_internals();
   feature_NImpuls_TOTZONE();
+
+  print_privates();
+  print_em_globals();
+  theFunctionToTest();
+  print_privates();
+  print_em_globals();
+
+  reset_globals();
+  reset_internals();
+  feature_Zustang_0_STATE_WITHIN_DEADZONE();
 
   print_privates();
   print_em_globals();
