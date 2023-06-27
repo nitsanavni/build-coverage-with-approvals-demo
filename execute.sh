@@ -7,7 +7,7 @@
 # build
 cc \
     -ftest-coverage -fprofile-arcs \
-    void-fn-test.c src/globals.cpp -o void-fn-test > /dev/null
+    void-fn-test.c src/globals.cpp src/sample.cpp -o void-fn-test > /dev/null
 
 # run & test
 ./void-fn-test | ./verify.sh -t void-fn
