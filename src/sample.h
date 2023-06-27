@@ -5,5 +5,6 @@
 #include "./globals.h"
 
 extern void theFunctionToTest();
+extern void print_privates();
 
 #endif // SAMPLE_H

@@ -44,11 +44,16 @@ void print_em_globals() {
 }
 
 int main() {
+  print_privates();
+  print_em_globals();
+
   theFunctionToTest();
+  print_privates();
   print_em_globals();
 
   set_globals(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
   theFunctionToTest();
+  print_privates();
   print_em_globals();
 }

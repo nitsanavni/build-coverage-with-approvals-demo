@@ -1,9 +1,15 @@
+#include <stdio.h>
+
 #include "./sample.h"
 
 // private static variables
 static int IstwMin;
 static int IstwMax;
 static unsigned int Zustand[2];
+
+void print_privates() {
+  printf("%d %d %d %d\n", IstwMin, IstwMax, Zustand[0], Zustand[1]);
+}
 
 void theFunctionToTest() {
   int ZwspAufO;
