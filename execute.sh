@@ -16,7 +16,7 @@ cc \
 rm void-fn-test
 
 # coverage
-# gcov -b globals.c
+gcov -b void-fn-test-sample.c
 
 # clean coverage
 rm void-fn-test*.gc*
