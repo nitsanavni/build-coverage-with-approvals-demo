@@ -101,4 +101,14 @@ int main() {
   theFunctionToTest();
   print_privates();
   print_em_globals();
+
+  reset_globals();
+  reset_internals();
+  AnsprZuO = 1;
+
+  print_privates();
+  print_em_globals();
+  theFunctionToTest();
+  print_privates();
+  print_em_globals();
 }
