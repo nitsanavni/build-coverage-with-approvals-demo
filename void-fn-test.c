@@ -49,21 +49,26 @@ void feature_AutoIbsOk_C_IBS_OK_and_stuff() {
   BinSteuer = BO_REGLER;
 }
 
+void reset_internals() { set_internals(0, 0, 0, 0); }
+
 int main() {
   print_privates();
   print_em_globals();
 
   theFunctionToTest();
+
   print_privates();
   print_em_globals();
 
   reset_globals();
+  reset_internals();
 
   theFunctionToTest();
   print_privates();
   print_em_globals();
 
   reset_globals();
+  reset_internals();
 
   feature_AutoIbsOk_C_IBS_OK_and_stuff();
 

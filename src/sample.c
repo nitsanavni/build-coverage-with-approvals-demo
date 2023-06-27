@@ -7,8 +7,18 @@ static int IstwMin;
 static int IstwMax;
 static unsigned int Zustand[2];
 
+// exposed for testing only
 void print_privates() {
   printf("%d %d %d %d\n", IstwMin, IstwMax, Zustand[0], Zustand[1]);
+}
+
+// exposed for testing only
+void set_internals(int _IstwMin, int _IstwMax, unsigned int _Zustand_0,
+                   unsigned int _Zustand_1_) {
+  IstwMin = _IstwMin;
+  IstwMax = _IstwMax;
+  Zustand[0] = _Zustand_0;
+  Zustand[1] = _Zustand_1_;
 }
 
 void theFunctionToTest() {
