@@ -14,9 +14,12 @@ void print_em_globals() {
 }
 
 int main() {
+  // before
   print_em_globals();
   // do we want to print the private variables too?
 
-  // call the function
+  theFunctionToTest();
+
+  // after
   print_em_globals();
 }
